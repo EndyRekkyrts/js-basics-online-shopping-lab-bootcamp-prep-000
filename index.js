@@ -10,20 +10,20 @@ function getCart() {
 }
 
 function addToCart(item) {
- const price = Math.floor(Math.random() * 100) +1
+ const price = Math.floor(Math.random() * 100) +1;
  
- cart.push({[item]: price})
+ cart.push({[item]: price});
  
- console.log(`${item} has been added to your cart.`)
- return cart
+ console.log(`${item} has been added to your cart.`);
+ return cart;
 }
 
 function viewCart() {
-  const length = cart.length
-  const itemsAndPrices = []
+  const length = cart.length;
+  const itemsAndPrices = [];
   
   if (!length) {
-    console.log("Your shopping cart is empty.")
+    console.log("Your shopping cart is empty.");
   }
 
   else {
@@ -38,18 +38,18 @@ function viewCart() {
 }
 
 function total() {
-  let total = 0
+  let total = 0;
   
   for (let i = 0, length = cart.length; i < 1; i++) {
     for (let item in cart[i]) {
       total += cart[i][item];
     }
   }
-  return total
+  return total;
 }
 
 function removeFromCart(item) {
-  let itemInCart = false
+  let itemInCart = false;
   
   for (let i = 0, length = cart.length; i < 1; i++) {
     if (cart[i].hasOwnProperty(item)) {
@@ -61,7 +61,7 @@ function removeFromCart(item) {
     console.log("That item is not in your cart.");
     }
 
-  return cart
+  return cart;
 }
 
 function placeOrder(cardNumber) {
@@ -70,5 +70,5 @@ function placeOrder(cardNumber) {
   }
   console.log(`Your total cost is \$${total()}, which will be charged to the card ${cardNumber}.`);
   
-  cart = []
+  cart = [];
 }
