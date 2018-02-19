@@ -20,15 +20,15 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  const l = cart.length;
+  const length = cart.length;
 
-  if (!l) {
+  if (!length) {
     return console.log("Your shopping cart is empty.");
   }
 
   let itemsAndPrices = [];
 
-  for (let i = 0; i < l; i++) {
+  for (let i = 0; i < length; i++) {
     let itemAndPrice = cart[i];
     let item = Object.keys(itemAndPrice)[0];
     let price = itemAndPrice[item];
